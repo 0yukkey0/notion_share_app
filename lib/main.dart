@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
+import 'package:notion_share_app/notion_client.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:metadata_fetch/metadata_fetch.dart';
 
@@ -196,6 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           );
                         },
                       );
+                      NotionClient.createDatabasePage(_entity.title!,_entity.tags!,_entity.url!);
                     },
                   ),
                 ],
